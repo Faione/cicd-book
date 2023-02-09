@@ -1,0 +1,10 @@
+version: "3"
+services:
+  book:
+    build: 
+      context: .
+    image: ${BOOK_NAME:-namelessbook}:latest
+    container_name: ${BOOK_NAME:-namelessbook}
+    restart: always
+    ports:
+    - ${BOOK_PORT:-11111}:80
